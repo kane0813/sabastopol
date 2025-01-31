@@ -22,11 +22,6 @@ export function Model({ url, scale, rotationSpeed }) {
     );
 }
 
-export function Model2({ url, scale }) {
-    const gltf = useLoader(GLTFLoader, url);
-    return <primitive object={gltf.scene} scale={scale} />;
-}
-
 export function Model3({ url, scale, wireframe }) {
     const gltf = useLoader(GLTFLoader, url);
     const modelRef = useRef();

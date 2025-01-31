@@ -5,7 +5,8 @@ export const Navbar = () => {
     return (
         <>
             <div className="bg-[#232323] text-white w-screen px-8 py-6 flex justify-between items-center">
-                <a className="cursor-pointer hover:text-[#f22387]">Sebastopol Model</a>
+                <a className="cursor-pointer hover:text-[#f22387]"
+                    onClick={() => { navigate("/") }}>Sebastopol Model</a>
                 <ul className='flex justify-between items-center'>
                     <li className="cursor-pointer hover:text-[#f22387] px-2"
                         onClick={() => { navigate("/") }}>Home</li>

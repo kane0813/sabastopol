@@ -1,14 +1,15 @@
-import React, { useRef, useState } from 'react';
-import { Canvas, useFrame, useLoader } from '@react-three/fiber';
+import React, { useState } from 'react';
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { Model2 } from "../components/SebastopolCannon";
+import { Model3 } from '../components/SebastopolCannon';
 
-const Rotatable = () => {
+const WireFrame = () => {
     const [scale, setScale] = useState([1, 1, 1]);
+    const [wireframe, setWireframe] = useState(false);
 
     return (
         <div style={{ width: '100vw', height: '100vh' }}>
-            <Canvas camera={{ position: [3, 5, 5], fov: 50 }} >
+            <Canvas camera={{ position: [5, 5, 5], fov: 50 }}>
                 <ambientLight intensity={1} />
                 <directionalLight
                     position={[5, 5, 5]}
@@ -16,13 +17,13 @@ const Rotatable = () => {
                     castShadow
                 />
                 <pointLight position={[10, 10, 10]} intensity={0.5}/>
-                <Model2 url="/stone texturev6.glb" scale={scale} />
+                <Model3 url="/stone texturev6.glb" scale={scale} wireframe={wireframe} />
 
                 {/* Add OrbitControls for drag-to-rotate */}
                 <OrbitControls
-                    enableZoom={false} // Disable zooming
-                    enablePan={false} // Disable panning
-                    rotateSpeed={1} // Adjust rotation speed
+                    enableZoom={false}
+                    enablePan={false}
+                    rotateSpeed={1}
                 />
             </Canvas>
 
@@ -46,8 +47,21 @@ const Rotatable = () => {
                     +
                 </label>
             </div>
+
+            {/* Toggle wireframe */}
+            <div className="absolute bottom-4 left-4 flex text-white font-['poppins'] justify-center items-center">
+                <label>
+                    <input
+                        type="checkbox"
+                        checked={wireframe}
+                        className='mx-4'
+                        onChange={(e) => setWireframe(e.target.checked)}
+                    />
+                    WireFrame
+                </label>
+            </div>
         </div>
     );
 }
 
-export default Rotatable
+export default WireFrame
