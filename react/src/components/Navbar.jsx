@@ -9,9 +9,10 @@ export const Navbar = () => {
                 <ul className='flex justify-between items-center'>
                     <li className="cursor-pointer hover:text-[#f22387] px-2"
                         onClick={() => { navigate("/") }}>Home</li>
+                    {/* <li className="cursor-pointer hover:text-[#f22387] px-2"
+                        onClick={() => { navigate("/rotate") }}>Rotatable</li> */}
                     <li className="cursor-pointer hover:text-[#f22387] px-2"
                         onClick={() => { navigate("/rotate") }}>Rotatable</li>
-                    <li></li>
                 </ul>
             </div>
         </>
