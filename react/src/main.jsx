@@ -1,10 +1,20 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
+import HomePage from './pages/Homepage.jsx'
+import Rotatable from './pages/Rotatable.jsx'
+import { Navbar } from './components/navbar.jsx'
 import './index.css'
-import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  <BrowserRouter>
+    <StrictMode>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/rotate" element={<Rotatable />} />
+      </Routes>
+    </StrictMode>
+  </BrowserRouter>
 )
