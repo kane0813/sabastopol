@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage.jsx'
 import WireFrame from './pages/WireFrame.jsx'
-import { Navbar } from './components/navbar.jsx'
+import { Navbar } from './components/Navbar.jsx'
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
