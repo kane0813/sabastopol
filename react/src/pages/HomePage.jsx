@@ -1,4 +1,4 @@
-import { Navbar } from "../components/navbar"
+import { Navbar } from "../components/Navbar"
 import React, { useRef, useState } from 'react';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { Model } from "../components/SebastopolCannon";
