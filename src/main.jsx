@@ -9,10 +9,10 @@ import './index.css'
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <StrictMode>
-      <Navbar />
+      <Navbar/>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/rotate" element={<WireFrame/>}/>
+        {/* <Route path="/" element={<HomePage />} />
+        <Route path="/rotate" element={<WireFrame/>}/> */}
       </Routes>
     </StrictMode>
   </BrowserRouter>
